@@ -9,16 +9,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @SuppressWarnings("serial")
 @ManagedBean
 @XmlRootElement
-public class ServerBackupRequest implements Serializable {
+public class WorldBackupRequest implements Serializable {
 
     @NotNull
-    private ServerBackupType type = ServerBackupType.OTHER;
+    private String worldName = "UNSET";
     
-    public ServerBackupType getType() {
-        return type;
+    public String getWorldName() {
+        return worldName;
     }
 
-    public void setType(ServerBackupType type) {
-        this.type = type;
+    public void setWorldName(String worldName) {
+        this.worldName = worldName;
     }
 }
